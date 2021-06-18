@@ -1,0 +1,69 @@
+$cl-prin-light: hsl(0, 2%, 11%);
+$cl-sec-light: hsl(0, 0%, 90%);
+$cl-ter-light: hsl(28, 100%, 50%);
+$cl-cua-light: hsla(28, 86%, 70%, 0.8);
+$cl-qui-light: hsla(0, 10%, 40%, 0.9);
+$cl-sex-light: hsl(28, 60%, 50%);
+$cl-sep-light: hsl(28, 70%, 60%);
+$cl-oct-light: hsl(0, 12%, 79%);
+$cl-font-light: hsl(0, 4%, 14%);
+$cl-prin-dark: hsl(223, 26%, 21%);
+$cl-sec-dark: hsl(220, 15%, 82%);
+$cl-ter-dark: hsl(28, 100%, 50%);
+$cl-cua-dark: hsla(0, 0%, 27%, 0.8);
+$cl-qui-dark: hsl(219, 5%, 60%);
+$cl-sex-dark: hsl(223, 20%, 20%);
+$cl-font-dark: hsl(0, 0%, 72%);
+$ft-prin: 'Montserrat';
+$ft-sec: 'RemachineScript';
+$shadow-dark: 1px 1px 8px -1px hsla(0, 1%, 28%, 0.7);
+$gradient-1-light: linear-gradient(17deg, hsla(28, 100%, 50%, 0.9) 50%, hsla(28, 100%, 50%, 0.7) 80%);
+$gradient-2-light: linear-gradient(90deg, rgba(230,230,230,0.8) 2%, rgba(255,121,0,0.7) 90%);
+$gradient-1-dark: linear-gradient(17deg, hsla(223, 26%, 21%, 1) 50%, hsla(0, 3%, 15%, 0.8) 80%);
+$gradient-2-dark: linear-gradient(90deg, hsla(0, 1%, 52%, 0.5) 2%, hsla(60, 1%, 14%, 0.5) 90%);
+$mw-480: 480px;
+$mw-580: 580px;
+$mw-768: 768px;
+$mw-992: 992px;
+$mw-1024: 1024px;
+$mw-1280: 1280px;
+$mw-1366: 1366px;
+$mw-1680: 1680px;
+$mw-1920: 1920px;
+
+
+@font-face{
+    font-family: 'Montserrat';
+    src: url('assets/recursos/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'RemachineScript';
+    src: url('assets/recursos/fonts/RemachineScript.ttf') format('truetype');
+}
+
+@mixin mq($mw){
+    @media screen and (min-width: $mw){
+        @content
+    }
+}
+
+@mixin df-drow($fd:row,$jc:center,$ai:center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin df-dcol($fd:column,$jc:center,$ai:center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin dg($gtc:100%,$gtr:100%) {
+    display: grid;
+    grid-template-columns: $gtc;
+    grid-auto-rows: $gtr;
+}

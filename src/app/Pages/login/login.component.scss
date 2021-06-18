@@ -1,0 +1,213 @@
+@import "../../../variables.scss";
+
+.login-ctn{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(17deg, rgba(230,230,230,1) 0%, rgba(255,121,0,1) 72%);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-logo-ctn{
+    width: 60rem;
+    height: 20rem;
+    position: relative;
+    margin: 0 auto;
+    top: 5rem;
+    z-index: 500;
+}
+
+.login-logo-img{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img{
+    width: 80%;
+    height: 80%;
+    background-image: url(../../../assets/recursos/img/trade-ux-logo-sinfondo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.login-logo-slogan{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo-slogan{
+    font-family: $ft-prin;
+    font-size: 2rem;
+    color: #e6e6e6;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 0px;
+}
+
+.slogan-color{
+    font-family: $ft-sec;
+    text-transform: none;
+    font-size: 5rem;
+    font-weight: lighter;
+    letter-spacing: 4px;
+}
+
+.login-box-ctn{
+    width: 100%;
+    height: 20rem;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 500;
+    margin-top: 5rem;
+}
+
+.box-ctn{
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn{
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 2rem;
+    font-family: $ft-prin;
+    text-decoration: none;
+    margin: 8rem 0;
+    border: 2px solid $cl-sec-light;
+    border-radius: 4px;
+    padding: 20px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    cursor: pointer;
+    letter-spacing: 2px;
+    z-index: 500;
+  }
+  .btn::before{
+    background: $cl-ter-light;
+    opacity: .7;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+
+.btn3::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .btn3:hover::before{
+    height: 380%;
+  }
+  
+
+.login-efecto{    
+    background-image: url(../../../assets/recursos/img/flechas.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -150px;
+    z-index: 1;
+    animation: flechas 3s linear infinite;
+}
+
+
+.login-efecto:nth-child(1){
+    width: 5rem;
+    height: 3rem;
+    left: 10%;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+}
+
+.login-efecto:nth-child(2){
+    width: 7rem;
+    height: 5rem;
+    left: 25%;
+    animation-duration: 4s;
+    animation-delay: .5s;    
+}
+
+.login-efecto:nth-child(3){
+    width: 9rem;
+    height: 7rem;
+    left: 35%;
+    animation-duration: 2.5s;
+    animation-delay: .2s;    
+}
+
+.login-efecto:nth-child(4){
+    width: 4rem;
+    height: 2rem;
+    left: 55%;
+    animation-duration: 3.7s;
+    animation-delay: .7s;    
+}
+
+.login-efecto:nth-child(5){
+    width: 7rem;
+    height: 5rem;
+    left: 65%;
+    animation-duration: 1.5s;
+    animation-delay: .1s;    
+}
+.login-efecto:nth-child(6){
+    width: 7rem;
+    height: 5rem;
+    left: 75%;
+    animation-duration: 3s;
+    animation-delay: .5s;    
+}
+.login-efecto:nth-child(7){
+    width: 5rem;
+    height: 3rem;
+    left: 45%;
+    animation-duration: 2.2s;
+    animation-delay: .2s;    
+}
+.login-efecto:nth-child(8){
+    width: 7rem;
+    height: 6rem;
+    left: 90%;
+    animation-duration: 5s;
+    animation-delay: 0;    
+}
+
+@keyframes flechas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: rotate(0deg);
+    }
+    50%{
+        bottom: 50vh;
+        opacity: .6;
+    }
+    90%{
+        transform: rotate(360deg);
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,202 @@
+@import "variables";
+
+//Inicio estilos generales
+* {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+a:link, a:visited, a:active{
+    text-decoration: none;
+}
+
+html{
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+
+//Inputs Styles
+// Quitar ojo de contraseña edge
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: #747880;
+   // -webkit-box-shadow: 0 0 0px 999999px rgba(115,112,108,1) inset;
+    
+}
+
+
+input:-webkit-autofill::first-line{
+    font-size: 1.5rem !important; 
+    -webkit-text-fill-color: #747880;   
+}
+
+                        
+.box-main-ctn::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */  
+}
+
+.box-main-ctn::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+    
+}
+
+.box-main-ctn::-webkit-scrollbar-thumb {
+    background-color: $cl-sex-light;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */    
+}
+
+.box-main-ctn.theme-dark::-webkit-scrollbar-thumb{
+    background-color: $cl-font-dark;
+}
+
+.title{
+    font-family: $ft-prin;
+    letter-spacing: 2px;
+    text-transform: uppercase;    
+    font-size: 1.5rem;
+    color: $cl-font-light;
+    text-indent: .5rem;    
+    &.theme-dark{
+        color: $cl-font-dark;
+    }
+}
+
+.input-small-ctn,
+.input-medium-ctn,
+.input-big-ctn{
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: .7rem .5rem;
+}
+
+
+.input-small-ctn{
+    width: 15rem;    
+}
+
+.input-medium-ctn{
+    width: 19rem;
+}
+
+.input-big-ctn{
+    width: 23rem;
+}
+
+.input-title{
+    font-family: $ft-prin;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: $cl-font-light;
+    &.theme-dark{
+        color: $cl-font-dark;
+    }
+}
+
+.input-small,
+.input-medium,
+.input-big{
+    width: 100%;
+    height: 2.2rem;
+    border-radius: 6px;
+    border: 3px solid $cl-sex-light;
+    text-indent: .5rem;
+    font-family: $ft-prin;
+    background-color: $cl-cua-light;
+    color: $cl-font-light;
+    &::placeholder{
+        color: $cl-font-light;
+    }
+    &.theme-dark{
+        border-color: $cl-font-dark;
+        background-color: $cl-cua-dark;
+        color: $cl-font-dark;
+        &::placeholder{
+            color: $cl-font-dark;
+        }
+    }
+}
+
+.error-text{
+    font-family: $ft-prin;
+    letter-spacing: 2px;
+    color: hsl(0, 100%, 25%);
+    &.theme-dark{
+        color: hsl(0, 100%, 40%) !important;
+    }
+}
+
+.btn-small-ctn{
+    width: 12rem;
+    height: 3.5rem;
+    margin: .5rem;
+}
+
+.btn-medium-ctn{
+    width: 14rem;
+    height: 3.5rem;
+    margin: 0.5rem;
+}
+
+.btn-big-ctn{
+    width: 16rem;
+    height: 3.5rem;
+    margin: 0.5rem;
+}
+
+.btn-small,
+.btn-medium,
+.btn-big{
+    width: 100%;
+    height: 100%;
+    border: 3px solid $cl-sex-light;
+    border-radius: 6px;
+    background-color: $cl-oct-light;
+    font-family: $ft-prin;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $cl-sex-light;
+    cursor: pointer;
+    transition: all .8s ease-in-out;
+    &:hover{
+        background-color: $cl-sex-light;
+        color: $cl-sec-light;
+        transition: all .8s ease-in-out;
+    }
+    &.theme-dark{
+        background-color: $cl-sex-dark;
+        border-color: $cl-sec-dark;
+        color: $cl-sec-dark;
+        &:hover{
+            background-color: $cl-sec-dark;
+            color: $cl-ter-dark;
+            transition: all .8s ease-in-out;
+        }
+    }
+}

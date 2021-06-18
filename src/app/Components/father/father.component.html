@@ -1,0 +1,117 @@
+<div class="home-ctn {{storedTheme}}">
+    <div class="home-columns-ctn {{storedTheme}}">
+        <div class="home-menu-prin-ctn {{storedTheme}}">
+            <div class="logo-ctn">
+                <div class="logo {{storedTheme}}"></div>
+            </div>
+            <nav class="links-ctn">
+                <ul #links class="links-nav">
+                    <li class="links">
+                        <div class="links-title {{storedTheme}}" #loaddata>
+                        <span class="icon icon-cube"></span>Productos
+                        </div>
+                    </li>
+                    <li class="links">
+                        <div class="links-title {{storedTheme}}" #tracking>
+                        <span class="icon icon-truck1"></span>Envios
+                        </div>
+                    </li>
+                    <li class="links">
+                        <div class="links-title {{storedTheme}}" #sales>
+                        <span class="icon icon-credit"></span>Ventas
+                        </div>
+                    </li>
+                    <li class="links">
+                        <div class="links-title {{storedTheme}}" #inventory>
+                        <span class="icon icon-cubes"></span>Inventario
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="home-body-prin-ctn {{storedTheme}}">
+            <div class="body-prin-header-ctn">
+                <div class="page-name-ctn">
+                    <h2 class="page-name {{storedTheme}}">
+                        Dashboard
+                    </h2>                    
+                </div>
+                <nav class="user-nav-ctn">
+                    <ul class="user-nav">
+                        <li class="user-nav-list">
+                            <div class="theme-switcher-wrap">
+                                <label 
+                                    (click)="setTheme()"
+                                    [ngClass]="(storedTheme === 'theme-dark')?'theme-switcher active' : 'theme-switcher'"
+                                    >
+                                    <div class="switch-path {{storedTheme}}">
+                                        <div class="switch-handle">
+                            
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>                            
+                        </li>
+                        <li class="user-nav-list {{storedTheme}}">
+                            <div class="calendar">
+                                <span class="icon-calendar1"></span>
+                            </div>
+                        </li>
+                        <li class="user-nav-list {{storedTheme}}">
+                            <div class="notification">
+                                <span class="icon-bell-o"></span>
+                            </div>
+                        </li>
+                        <li class="user-nav-list {{storedTheme}}">
+                            <div class="user-icon">
+                                <span class="icon-user-circle-o"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="body-prin-main-ctn">
+                <div class="prin-main-ctn">
+                    <div class="box-main-ctn {{storedTheme}}">                        
+                        <!-- <h1 class="title {{storedTheme}}">
+                            Productos
+                        </h1>
+                        <div class="input-small-ctn">
+                            <h2 class="input-title {{storedTheme}}">
+                                Producto
+                            </h2>
+                            <input type="text" class="input-small {{storedTheme}}" placeholder="Producto">
+                            <p class="error-text {{storedTheme}}">Error</p>
+                        </div>
+                        <div class="input-medium-ctn">
+                            <h2 class="input-title {{storedTheme}}">
+                                Producto 2
+                            </h2>
+                            <input type="text" class="input-medium {{storedTheme}}" placeholder="Producto 2">
+                            <p class="error-text {{storedTheme}}">Error</p>
+                        </div>
+                        <div class="input-big-ctn">
+                            <h2 class="input-title {{storedTheme}}">
+                                Producto 3
+                            </h2>
+                            <input type="text" class="input-big {{storedTheme}}" placeholder="Producto 3">
+                            <p class="error-text {{storedTheme}}">Error</p>
+                        </div>
+                        <div class="btn-small-ctn">
+                            <button class="btn-small {{storedTheme}}">Small</button>
+                        </div>
+                        <div class="btn-medium-ctn">
+                            <button class="btn-medium {{storedTheme}}">Medium</button>
+                        </div>
+                        <div class="btn-big-ctn">
+                            <button class="btn-big {{storedTheme}}">Big</button>
+                        </div> -->
+                        <app-product-grid></app-product-grid>
+                        <router-outlet></router-outlet>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
